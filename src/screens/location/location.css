@@ -1,0 +1,335 @@
+.one-call-location {
+  background: var(--soft);
+}
+
+.ocl-hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 82% 28%, rgba(91, 205, 240, 0.2), transparent 28%),
+    var(--ink);
+  color: var(--paper);
+}
+
+.ocl-hero-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(360px, 0.75fr);
+  align-items: end;
+  gap: 72px;
+  padding-block: 112px 104px;
+}
+
+.ocl-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 22px;
+  color: var(--cyan);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.ocl-eyebrow::before {
+  width: 28px;
+  height: 2px;
+  background: currentColor;
+  content: "";
+}
+
+.ocl-hero h1 {
+  max-width: 780px;
+  font-size: clamp(48px, 7vw, 88px);
+}
+
+.ocl-hero h1 em,
+.ocl-section-heading h2 em {
+  color: var(--amber-bright);
+  font-style: normal;
+}
+
+.ocl-hero-description {
+  max-width: 680px;
+  margin: 28px 0 0;
+  color: rgba(248, 250, 252, 0.72);
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.ocl-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 34px;
+}
+
+.ocl-service-stats {
+  display: grid;
+  margin: 0;
+  border: 1px solid rgba(91, 205, 240, 0.28);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+}
+
+.ocl-service-stats div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 25px 28px;
+}
+
+.ocl-service-stats div + div {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.ocl-service-stats dt {
+  color: rgba(248, 250, 252, 0.56);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.ocl-service-stats dd {
+  margin: 0;
+  color: var(--paper);
+  font-family: "Archivo Black", "Arial Black", sans-serif;
+  font-size: 24px;
+  text-align: right;
+}
+
+.ocl-coverage {
+  padding: 104px 0;
+}
+
+.ocl-section-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(320px, 0.55fr);
+  align-items: end;
+  gap: 28px 72px;
+  margin-bottom: 48px;
+}
+
+.ocl-section-heading .ocl-eyebrow {
+  grid-column: 1 / -1;
+  margin-bottom: -8px;
+  color: var(--blue);
+}
+
+.ocl-section-heading h2 {
+  font-size: clamp(38px, 5vw, 62px);
+}
+
+.ocl-section-heading h2 em {
+  color: var(--blue);
+}
+
+.ocl-section-heading > p:last-child {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.ocl-county-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.ocl-county-card {
+  border: 1px solid rgba(15, 23, 42, 0.09);
+  border-radius: 10px;
+  background: var(--paper);
+  padding: 30px;
+  box-shadow: 0 16px 44px rgba(15, 23, 42, 0.06);
+}
+
+.ocl-county-card-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 22px;
+  border-bottom: 2px solid var(--blue);
+  padding-bottom: 15px;
+}
+
+.ocl-county-card h3 {
+  margin: 0;
+  font-family: "Archivo Black", "Arial Black", sans-serif;
+  font-size: 25px;
+  letter-spacing: -0.025em;
+}
+
+.ocl-county-card-heading span {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.ocl-county-description {
+  margin: -4px 0 20px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.ocl-county-card ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ocl-county-card li {
+  border: 1px solid rgba(24, 101, 217, 0.16);
+  border-radius: 999px;
+  background: rgba(24, 101, 217, 0.055);
+  padding: 7px 12px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.ocl-coverage-callout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  margin-top: 28px;
+  border-radius: 10px;
+  background: var(--ink);
+  padding: 32px 36px;
+  color: var(--paper);
+}
+
+.ocl-coverage-callout span,
+.ocl-coverage-callout strong {
+  display: block;
+}
+
+.ocl-coverage-callout span {
+  margin-bottom: 5px;
+  color: var(--cyan);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.ocl-coverage-callout strong {
+  font-family: "Archivo Black", "Arial Black", sans-serif;
+  font-size: 24px;
+}
+
+@media (max-width: 900px) {
+  .ocl-hero-inner,
+  .ocl-section-heading {
+    grid-template-columns: 1fr;
+  }
+
+  .ocl-hero-inner {
+    gap: 48px;
+    padding-block: 86px;
+  }
+
+  .ocl-service-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .ocl-service-stats div {
+    display: block;
+    padding: 22px;
+  }
+
+  .ocl-service-stats div + div {
+    border-top: 0;
+    border-left: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .ocl-service-stats dd {
+    margin-top: 8px;
+    text-align: left;
+  }
+
+  .ocl-section-heading {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 720px) {
+  .ocl-hero-inner {
+    padding-block: 64px;
+  }
+
+  .ocl-hero h1 {
+    font-size: clamp(42px, 13vw, 58px);
+  }
+
+  .ocl-hero-description {
+    font-size: 15px;
+  }
+
+  .ocl-hero-actions .ocs-button {
+    width: 100%;
+  }
+
+  .ocl-service-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .ocl-service-stats div {
+    display: flex;
+  }
+
+  .ocl-service-stats div + div {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-left: 0;
+  }
+
+  .ocl-service-stats dd {
+    margin-top: 0;
+    font-size: 20px;
+    text-align: right;
+  }
+
+  .ocl-coverage {
+    padding: 72px 0;
+  }
+
+  .ocl-county-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ocl-county-card {
+    padding: 24px 20px;
+  }
+
+  .ocl-county-card-heading {
+    display: block;
+  }
+
+  .ocl-county-card-heading span {
+    display: block;
+    margin-top: 5px;
+  }
+
+  .ocl-coverage-callout {
+    display: grid;
+    padding: 28px 24px;
+  }
+
+  .ocl-coverage-callout .ocs-button {
+    width: 100%;
+  }
+}

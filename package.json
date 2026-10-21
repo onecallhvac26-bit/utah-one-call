@@ -1,0 +1,67 @@
+{
+  "name": "one-call-hvac",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "npm@11.11.1",
+  "engines": {
+    "node": ">=22.9.0"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "next dev --hostname 0.0.0.0 --port 3000",
+    "build": "opennextjs-cloudflare build",
+    "next:build": "next build",
+    "cf:build": "opennextjs-cloudflare build",
+    "cf:deploy": "opennextjs-cloudflare deploy",
+    "deploy": "npm run build && npm run cf:deploy",
+    "lint": "eslint .",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "start": "next start --hostname 0.0.0.0 --port 3000",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit --pretty false"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^7.3.9",
+    "@mui/material": "^7.3.9",
+    "@mui/x-date-pickers": "^8.27.2",
+    "@mui/x-tree-view": "^8.27.2",
+    "@next/third-parties": "16.3.0",
+    "@radix-ui/react-dropdown-menu": "^2.1.16",
+    "@radix-ui/react-select": "^2.2.6",
+    "dayjs": "^1.11.20",
+    "motion": "^12.38.0",
+    "next": "16.3.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@opennextjs/cloudflare": "1.19.11",
+    "@playwright/test": "^1.58.2",
+    "@tailwindcss/postcss": "^4",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitest/coverage-v8": "^3.2.4",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.0",
+    "eslint-plugin-react-refresh": "^0.4.22",
+    "globals": "^16.4.0",
+    "jsdom": "^24.1.3",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "typescript-eslint": "^8.44.1",
+    "vitest": "^3.2.4",
+    "wrangler": "4.115.0"
+  },
+  "overrides": {
+    "esbuild": "0.28.1",
+    "postcss": "^8.5.23",
+    "undici": "^7.24.0",
+    "ws": "8.21.0"
+  }
+}

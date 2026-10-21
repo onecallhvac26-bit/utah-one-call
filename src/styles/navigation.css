@@ -1,0 +1,252 @@
+.site-nav-about {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.site-nav-about > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.site-nav-about > a span {
+  font-size: 9px;
+  transition: transform 0.25s ease;
+}
+
+.site-nav-about:hover > a span,
+.site-nav-about:focus-within > a span {
+  transform: rotate(180deg);
+}
+
+.site-nav-submenu {
+  position: absolute;
+  z-index: 120;
+  top: calc(100% + 12px);
+  left: 50%;
+  min-width: 180px;
+  transform: translate(-50%, 8px);
+  visibility: hidden;
+  border: 1px solid rgba(91, 205, 240, 0.22);
+  border-radius: 7px;
+  background: #0a0f1c;
+  box-shadow: 0 16px 35px rgba(10, 15, 28, 0.24);
+  padding: 8px;
+  opacity: 0;
+  transition:
+    opacity 0.24s ease,
+    transform 0.24s ease,
+    visibility 0.24s ease;
+}
+
+.site-nav-submenu::before {
+  position: absolute;
+  right: 0;
+  bottom: 100%;
+  left: 0;
+  height: 14px;
+  content: "";
+}
+
+.site-nav-about:hover .site-nav-submenu,
+.site-nav-about:focus-within .site-nav-submenu {
+  transform: translate(-50%, 0);
+  visibility: visible;
+  opacity: 1;
+}
+
+.site-nav-submenu a {
+  display: block;
+  border-radius: 5px;
+  padding: 10px 12px !important;
+  color: #f8fafc !important;
+  white-space: nowrap;
+}
+
+.site-nav-submenu a:hover,
+.site-nav-submenu a:focus-visible,
+.site-nav-submenu a.is-active {
+  background: #1865d9;
+  color: white !important;
+  outline: none;
+}
+
+.site-nav-submenu a::after {
+  display: none;
+}
+
+.site-nav-subpage {
+  padding-left: 18px !important;
+  color: #5bcdf0 !important;
+  font-size: 0.72em !important;
+}
+
+/*
+ * All routes use the same three-zone header geometry. Equal outer tracks keep
+ * the links centered on the viewport instead of between the logo and actions.
+ */
+.site-header-grid {
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) !important;
+  width: 100% !important;
+  max-width: none !important;
+  padding-inline: 28px !important;
+}
+
+.site-header-logo {
+  grid-column: 1;
+  justify-self: start !important;
+}
+
+.site-header-links {
+  grid-column: 2;
+  justify-content: center;
+  justify-self: center !important;
+  gap: clamp(22px, 2vw, 32px) !important;
+  white-space: nowrap;
+}
+
+.site-header-actions {
+  grid-column: 3;
+  justify-self: end !important;
+  min-width: max-content;
+  flex-wrap: nowrap;
+}
+
+.site-header-phone,
+.site-header-cta {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.site-header-phone {
+  line-height: 1;
+}
+
+.site-header-phone svg {
+  flex: 0 0 auto;
+}
+
+.site-header-contact-action {
+  display: none;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition:
+    background-color 0.25s ease,
+    box-shadow 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.site-header-contact-action svg {
+  width: 21px;
+  height: 21px;
+}
+
+.site-header-contact-action.is-call {
+  background: var(--amber);
+  color: var(--ink);
+}
+
+.site-header-contact-action.is-text {
+  background: var(--blue);
+  color: white;
+}
+
+.site-header-contact-action:hover,
+.site-header-contact-action:focus-visible {
+  transform: translateY(-2px);
+  background: var(--cyan);
+  color: var(--ink);
+  box-shadow: 0 8px 20px rgba(91, 205, 240, 0.3);
+  outline: none;
+}
+
+@media (max-width: 1150px) and (min-width: 901px) {
+  .site-header-links {
+    gap: clamp(16px, 1.6vw, 22px) !important;
+  }
+
+  .site-header-links a {
+    letter-spacing: 0.7px !important;
+  }
+
+  .site-header-phone {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .site-header-links {
+    display: none !important;
+  }
+
+  .site-header-grid {
+    grid-template-columns: auto minmax(0, 1fr) !important;
+    gap: 12px !important;
+    padding-inline: 20px !important;
+  }
+
+  .site-header-actions {
+    grid-column: 2;
+    justify-self: end !important;
+    gap: 8px !important;
+    margin-left: auto;
+  }
+
+  .site-header-phone {
+    display: none !important;
+  }
+
+  .site-header-contact-action,
+  .site-header-cta,
+  :is(.oc-menu-button, .ocs-menu, .oca-menu, .occ-menu) {
+    display: inline-flex !important;
+  }
+
+  :is(.oc-menu-button, .ocs-menu, .oca-menu, .occ-menu) {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .site-header-grid {
+    gap: 8px !important;
+    padding-inline: 14px !important;
+  }
+
+  .site-header-actions {
+    gap: 6px !important;
+  }
+
+  .site-header-contact-action {
+    width: 38px;
+    height: 38px;
+    flex-basis: 38px;
+  }
+
+  .site-header-cta {
+    min-height: 38px !important;
+    padding: 8px 11px !important;
+    font-size: 10px !important;
+    letter-spacing: 0.45px !important;
+  }
+
+  :is(.oc-menu-button, .ocs-menu, .oca-menu, .occ-menu) {
+    width: 38px;
+    height: 38px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-nav-about > a span,
+  .site-nav-submenu {
+    transition: none;
+  }
+}

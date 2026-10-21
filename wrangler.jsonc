@@ -1,0 +1,31 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "main": ".open-next/worker.js",
+  "name": "one-call-hvac",
+  "compatibility_date": "2026-08-06",
+  "compatibility_flags": [
+    "nodejs_compat",
+    "global_fetch_strictly_public"
+  ],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "vars": {
+    "NEXT_PUBLIC_GOOGLE_SERVICE_AREA_MAP_ID": "1EVCcWbvQk2b4XwJIXnlzK7-TliTsDSU",
+    "RESEND_FROM_EMAIL": "One Call Heating & Air <quotes@utahonecall.com>",
+    "RESEND_TO_EMAIL": "brownzowl4626@gmail.com"
+  },
+  "services": [
+    {
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "one-call-hvac"
+    }
+  ],
+  "routes": [
+    {
+      "pattern": "utahonecall.com",
+      "custom_domain": true
+    }
+  ]
+}

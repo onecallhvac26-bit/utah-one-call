@@ -1,0 +1,33 @@
+.one-call-social-media { background: #f8fafc; }
+.ocsm-hero { position: relative; overflow: hidden; background: linear-gradient(120deg,#0a0f1c 0%,#10233a 62%,#0a4db8 145%); color: #f8fafc; }
+.ocsm-hero__inner { position: relative; z-index: 1; min-height: 650px; padding-block: 108px 96px; }
+.ocsm-breadcrumb { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; color: rgba(248,250,252,.55); font-size: 10px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; }
+.ocsm-breadcrumb a { color: #5bcdf0; }
+.ocsm-eyebrow, .ocsm-section-heading > p, .ocsm-checklist header > p { margin: 0 0 20px; color: #5bcdf0; font-size: 11px; font-weight: 900; letter-spacing: 3px; text-transform: uppercase; }
+.ocsm-hero h1 { max-width: 940px; font-size: clamp(56px,8vw,106px); }
+.ocsm-hero h1 em { color: #ffb940; font-style: normal; }
+.ocsm-hero__description { max-width: 680px; margin: 28px 0 0; color: rgba(248,250,252,.74); font-size: 17px; line-height: 1.75; }
+.ocsm-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+.ocsm-topics { padding: 96px 0; }
+.ocsm-section-heading { display: grid; grid-template-columns: minmax(0,1fr) minmax(320px,.65fr); align-items: end; gap: 16px 64px; margin-bottom: 42px; }
+.ocsm-section-heading > p { grid-column: 1 / -1; color: #1865d9; }
+.ocsm-section-heading h2 { font-size: clamp(38px,5vw,62px); }
+.ocsm-section-heading > span { color: #475569; font-size: 15px; line-height: 1.75; }
+.ocsm-topic-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; }
+.ocsm-topic-grid article { position: relative; overflow: hidden; border: 1px solid rgba(15,23,42,.1); border-radius: 10px; background: #fff; padding: 32px; box-shadow: 0 14px 42px rgba(15,23,42,.06); }
+.ocsm-topic-grid article::before { position: absolute; top: 0; right: 0; left: 0; height: 4px; background: linear-gradient(90deg,#1865d9,#5bcdf0); content: ""; }
+.ocsm-topic-grid article > span { color: #1865d9; font-size: 10px; font-weight: 900; letter-spacing: 2px; text-transform: uppercase; }
+.ocsm-topic-grid h3 { margin: 24px 0 12px; font-family: "Archivo Black","Arial Black",sans-serif; font-size: 24px; line-height: 1.12; }
+.ocsm-topic-grid p, .ocsm-checklist header > span, .ocsm-checklist li p { margin: 0; color: #475569; font-size: 14px; line-height: 1.72; }
+.ocsm-checklist { position: relative; overflow: hidden; background: #0a0f1c; color: #f8fafc; }
+.ocsm-checklist__inner { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(280px,.8fr) minmax(0,1.2fr); gap: 76px; padding-block: 96px; }
+.ocsm-checklist header h2 { margin-bottom: 20px; font-size: clamp(38px,4.8vw,60px); }
+.ocsm-checklist header > span { display: block; color: rgba(248,250,252,.68); }
+.ocsm-checklist ol { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.ocsm-checklist li { display: grid; grid-template-columns: 46px 1fr; align-items: center; gap: 16px; border: 1px solid rgba(255,255,255,.12); border-radius: 9px; background: rgba(30,41,59,.7); padding: 20px 22px; }
+.ocsm-checklist li > span { color: #5bcdf0; font-size: 11px; font-weight: 900; letter-spacing: 2px; }
+.ocsm-checklist li p { color: rgba(248,250,252,.78); font-weight: 650; }
+.ocsm-checklist__actions { grid-column: 2; display: flex; flex-wrap: wrap; align-items: center; gap: 22px; }
+.ocsm-checklist__actions > a:last-child { color: #5bcdf0; font-size: 13px; font-weight: 800; }
+@media (max-width:900px) { .ocsm-section-heading, .ocsm-checklist__inner { grid-template-columns: 1fr; } .ocsm-topic-grid { grid-template-columns: 1fr; } .ocsm-checklist__actions { grid-column: auto; } }
+@media (max-width:720px) { .ocsm-hero__inner { min-height: auto; padding-block: 64px 52px; } .ocsm-hero h1 { font-size: 46px; } .ocsm-hero__description { font-size: 14px; } .ocsm-actions { flex-direction: column; } .ocsm-actions .ocs-button { width: 100%; } .ocsm-topics, .ocsm-checklist__inner { padding-block: 56px; } .ocsm-section-heading { margin-bottom: 26px; } .ocsm-section-heading h2, .ocsm-checklist header h2 { font-size: 32px; } .ocsm-section-heading > span { font-size: 13.5px; } .ocsm-topic-grid article { padding: 24px; } .ocsm-checklist__inner { gap: 34px; } .ocsm-checklist li { grid-template-columns: 34px 1fr; padding: 18px; } .ocsm-checklist__actions { align-items: stretch; flex-direction: column; } }

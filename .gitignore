@@ -1,0 +1,20 @@
+node_modules
+dist
+.next
+.open-next
+.wrangler
+*.tsbuildinfo
+.DS_Store
+*.local
+.env*
+!.env.example
+*.log
+
+# Internal working material is excluded from the client repository.
+/docs/
+/AGENTS*.md
+/.agents/
+/.codex/
+/CLAUDE.md
+/.claude/
+/free-quote-form/

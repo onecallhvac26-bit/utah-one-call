@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700;800&display=swap");
+
+.not-found {
+  align-items: center;
+  background:
+    linear-gradient(rgba(4, 17, 31, 0.92), rgba(4, 17, 31, 0.96)),
+    url("/onecall-heating-and-air/airflow-pattern.svg");
+  color: #f7fbff;
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", sans-serif;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.not-found > a:first-child {
+  display: block;
+  margin-bottom: 36px;
+  width: 150px;
+}
+
+.not-found img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.not-found-code {
+  color: #f4ad23;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  margin: 0 0 12px;
+}
+
+.not-found h1 {
+  font-family: "Archivo Black", sans-serif;
+  font-size: clamp(40px, 7vw, 78px);
+  line-height: 0.98;
+  margin: 0;
+  max-width: 780px;
+  text-transform: uppercase;
+}
+
+.not-found > p:not(.not-found-code) {
+  color: #b8c8d8;
+  font-size: 18px;
+  line-height: 1.7;
+  margin: 24px auto 0;
+  max-width: 640px;
+}
+
+.not-found-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.not-found-actions a {
+  background: #f4ad23;
+  border: 2px solid #f4ad23;
+  color: #071727;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  padding: 16px 22px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.not-found-actions a:last-child {
+  background: transparent;
+  color: #f7fbff;
+}

@@ -1,0 +1,164 @@
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+:where(a[href], button, select, summary, [role="button"]) {
+  cursor: pointer;
+  transition:
+    color 0.26s ease,
+    filter 0.26s ease,
+    opacity 0.26s ease,
+    text-decoration-color 0.26s ease;
+}
+
+:where(a[href], button, select, summary, [role="button"]):hover {
+  filter: brightness(1.16) saturate(1.12);
+}
+
+a[href]:not([class]):hover {
+  color: var(--cyan, #5bcdf0);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+:where(input, select, textarea) {
+  transition:
+    background-color 0.26s ease,
+    border-color 0.26s ease,
+    box-shadow 0.26s ease;
+}
+
+:where(input, select, textarea):hover {
+  border-color: var(--blue, #1865d9);
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(24, 101, 217, 0.08);
+}
+
+:where(a[href], button, input, select, textarea, summary, [role="button"]):focus-visible {
+  outline: 3px solid var(--cyan, #5bcdf0);
+  outline-offset: 3px;
+}
+
+:is(.oc-header-phone, .ocs-nav-phone, .oca-nav-phone, .occ-nav-phone) {
+  border-radius: 6px;
+  transition:
+    color 0.28s ease,
+    filter 0.28s ease,
+    text-shadow 0.28s ease,
+    transform 0.28s ease;
+}
+
+.oc-header-phone:hover,
+.oc-header-phone:focus-visible {
+  transform: translateY(-2px);
+  color: var(--cyan);
+  filter: brightness(1.18);
+  text-shadow: 0 0 16px rgba(91, 205, 240, 0.72);
+}
+
+:is(.ocs-nav-phone, .oca-nav-phone, .occ-nav-phone):hover,
+:is(.ocs-nav-phone, .oca-nav-phone, .occ-nav-phone):focus-visible {
+  transform: translateY(-2px);
+  color: var(--blue);
+  filter: brightness(1.12);
+  text-shadow: 0 0 14px rgba(24, 101, 217, 0.38);
+}
+
+:is(.oc-button, .ocs-button, .oca-button, .occ-button),
+.site-header-contact-action,
+:is(.oc-menu-button, .ocs-menu, .oca-menu, .occ-menu),
+:is(.oc-drawer, .ocs-drawer, .oca-drawer, .occ-drawer) > button,
+.oc-faq button,
+.oc-hero-arrow,
+.oc-hero-dots button {
+  cursor: pointer;
+  transition:
+    background-color 0.28s ease,
+    border-color 0.28s ease,
+    color 0.28s ease,
+    box-shadow 0.28s ease,
+    transform 0.28s ease;
+}
+
+:is(.oc-button-amber, .ocs-button-amber, .oca-button-amber, .occ-button-amber):hover,
+:is(.oc-button-amber, .ocs-button-amber, .oca-button-amber, .occ-button-amber):focus-visible {
+  border-color: #ffca66;
+  background: #ffb940;
+  color: var(--ink);
+  box-shadow:
+    0 2px 0 #d97809,
+    0 0 20px rgba(255, 185, 64, 0.68),
+    0 14px 34px rgba(248, 154, 26, 0.42);
+}
+
+:is(.oc-button-outline, .ocs-button-outline, .oca-button-outline):hover,
+:is(.oc-button-outline, .ocs-button-outline, .oca-button-outline):focus-visible {
+  background: var(--blue);
+  color: white;
+  box-shadow: 0 10px 24px rgba(24, 101, 217, 0.22);
+}
+
+:is(.oc-button-ghost, .ocs-button-ghost, .oca-button-ghost):hover,
+:is(.oc-button-ghost, .ocs-button-ghost, .oca-button-ghost):focus-visible {
+  border-color: var(--cyan);
+  background: var(--cyan);
+  color: var(--ink);
+}
+
+.occ-button-blue:hover,
+.occ-button-blue:focus-visible {
+  background: var(--cyan);
+  color: var(--ink);
+  box-shadow: 0 10px 24px rgba(91, 205, 240, 0.28);
+}
+
+:is(.oc-menu-button, .ocs-menu, .oca-menu, .occ-menu):hover,
+:is(.oc-menu-button, .ocs-menu, .oca-menu, .occ-menu):focus-visible {
+  border-radius: 6px;
+  background: var(--blue);
+  color: white;
+  outline: none;
+}
+
+:is(.oc-drawer, .ocs-drawer, .oca-drawer, .occ-drawer) > button:hover,
+:is(.oc-drawer, .ocs-drawer, .oca-drawer, .occ-drawer) > button:focus-visible {
+  border-radius: 6px;
+  background: var(--amber);
+  color: var(--ink);
+  outline: none;
+}
+
+.oc-faq button:hover,
+.oc-faq button:focus-visible {
+  background: rgba(24, 101, 217, 0.08);
+  color: var(--blue);
+  outline: none;
+}
+
+.oc-hero-dots button:hover,
+.oc-hero-dots button:focus-visible {
+  background: var(--cyan);
+}
+
+:is(.oc-button, .ocs-button, .oca-button, .occ-button):active,
+.site-header-contact-action:active {
+  transform: translateY(1px) scale(0.985);
+}
+
+:is(.oc-drawer, .ocs-drawer, .oca-drawer, .occ-drawer) {
+  transition: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :where(a[href], button, input, select, textarea, summary, [role="button"]),
+  :is(.oc-button, .ocs-button, .oca-button, .occ-button),
+  button {
+    transition-duration: 0.01ms;
+  }
+}

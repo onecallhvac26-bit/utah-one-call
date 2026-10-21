@@ -1,0 +1,310 @@
+.occ-form-card {
+  position: relative;
+  container-type: inline-size;
+  overflow: hidden;
+  border: 1px solid rgba(15, 23, 42, 0.16);
+  border-radius: 12px;
+  background: var(--paper);
+  padding: 50px 44px;
+}
+
+.occ-form-card::before {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: linear-gradient(90deg, var(--amber), var(--cyan), var(--blue));
+  content: "";
+}
+
+.occ-form-head {
+  margin-bottom: 28px;
+}
+
+.occ-form-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.occ-form-eyebrow::before {
+  width: 28px;
+  height: 2px;
+  background: var(--blue);
+  content: "";
+}
+
+.occ-form-card h2 {
+  margin: 0 0 10px;
+  font-family: "Archivo Black", "Arial Black", sans-serif;
+  font-size: clamp(30px, 3.6vw, 42px);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1.02;
+}
+
+.occ-form-card h2 em {
+  color: var(--blue);
+  font-style: normal;
+}
+
+.occ-form-head > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14.5px;
+  line-height: 1.65;
+}
+
+.occ-quote-form {
+  display: grid;
+  gap: 18px;
+}
+
+.occ-quote-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.occ-quote-grid.is-two-column {
+  grid-template-columns: 1fr 1fr;
+}
+
+.occ-quote-grid.is-address-row {
+  grid-template-columns: 1.25fr 0.72fr 0.8fr;
+}
+
+.occ-form-honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.occ-form-card .occ-more-info {
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.occ-more-info-toggle {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border: 0;
+  border-top: 1px solid rgba(15, 23, 42, 0.13);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.13);
+  background: transparent;
+  padding: 15px 0;
+  color: var(--text);
+  font-family: Inter, sans-serif;
+  text-align: left;
+  cursor: pointer;
+}
+
+.occ-more-info-toggle > span {
+  display: grid;
+  gap: 2px;
+}
+
+.occ-more-info-toggle strong {
+  color: var(--blue);
+  font-size: 13px;
+}
+
+.occ-more-info-toggle small {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.occ-more-info-icon {
+  display: inline-flex;
+  flex: 0 0 auto;
+  color: var(--blue);
+}
+
+.occ-more-info-icon svg {
+  display: block;
+}
+
+.occ-more-info-toggle:focus-visible {
+  outline: 0;
+}
+
+.occ-more-info-toggle:focus-visible strong {
+  text-decoration: underline 2px var(--cyan);
+  text-underline-offset: 4px;
+}
+
+.occ-more-info-panel {
+  overflow: hidden;
+}
+
+.occ-more-info-fields {
+  display: grid;
+  gap: 18px;
+  padding: 18px 0 4px;
+}
+
+.occ-select-menu-paper {
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 10px !important;
+  box-shadow: 0 18px 44px rgba(15, 23, 42, 0.2) !important;
+}
+
+.occ-select-menu-paper .MuiMenu-list {
+  padding: 6px;
+}
+
+.occ-select-menu-paper .MuiMenuItem-root {
+  min-height: 42px;
+  border-radius: 6px;
+  font-family: Inter, sans-serif;
+  font-size: 13px;
+  transition: background-color 0.16s ease, color 0.16s ease;
+}
+
+.occ-select-menu-paper .MuiMenuItem-root:hover,
+.occ-select-menu-paper .MuiMenuItem-root.Mui-selected {
+  background: rgba(24, 101, 217, 0.1);
+  color: var(--blue);
+}
+
+.occ-quote-consent {
+  display: grid;
+  gap: 2px;
+}
+
+.occ-quote-submit {
+  display: inline-flex;
+  width: 100%;
+  min-height: 54px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--blue);
+  padding: 14px 24px;
+  color: white;
+  box-shadow: 0 2px 0 #0a4db8, 0 10px 24px rgba(24, 101, 217, 0.3);
+  font: 800 13px/1 Inter, sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.occ-quote-submit:hover,
+.occ-quote-submit:focus-visible {
+  background: var(--cyan);
+  color: var(--ink);
+  box-shadow: 0 10px 24px rgba(91, 205, 240, 0.28);
+}
+
+.occ-quote-submit:focus-visible {
+  outline: 3px solid rgba(24, 101, 217, 0.24);
+  outline-offset: 3px;
+}
+
+.occ-quote-submit:disabled {
+  cursor: wait;
+  opacity: 0.68;
+}
+
+.occ-quote-submit svg {
+  width: 19px;
+  height: 19px;
+}
+
+.occ-submit-spinner {
+  animation: occ-spin 0.8s linear infinite;
+}
+
+.occ-form-alert {
+  border-radius: 8px !important;
+  font-family: Inter, sans-serif !important;
+}
+
+.occ-form-response-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11.5px;
+  line-height: 1.55;
+  text-align: center;
+}
+
+@keyframes occ-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 720px) {
+  .occ-form-card {
+    padding: 30px 22px;
+  }
+
+  .occ-form-card h2 {
+    font-size: 24px;
+  }
+
+  .occ-form-head > p {
+    font-size: 13px;
+  }
+
+  .occ-quote-grid.is-two-column,
+  .occ-quote-grid.is-address-row {
+    grid-template-columns: 1fr;
+  }
+
+  .occ-more-info-toggle {
+    padding: 13px 0;
+  }
+
+  .occ-more-info-fields {
+    padding: 16px 0 2px;
+  }
+}
+
+@container (max-width: 650px) {
+  .occ-quote-grid.is-address-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .occ-quote-grid.is-address-row > :first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@container (max-width: 410px) {
+  .occ-quote-grid.is-two-column,
+  .occ-quote-grid.is-address-row {
+    grid-template-columns: 1fr;
+  }
+
+  .occ-quote-grid.is-address-row > :first-child {
+    grid-column: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .occ-submit-spinner {
+    animation: none;
+  }
+
+  .occ-quote-submit,
+  .occ-select-menu-paper .MuiMenuItem-root {
+    transition: none;
+  }
+}
