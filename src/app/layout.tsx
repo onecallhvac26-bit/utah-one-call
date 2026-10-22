@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import Script from "next/script";
 
 import { RouteEffects } from "@/components/RouteEffects";
 import {
@@ -35,6 +36,18 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang={SITE_LANGUAGE}>
       <body>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-0D282WQWLZ"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-0D282WQWLZ');
+          `}
+        </Script>
         <RouteEffects />
         {children}
       </body>
