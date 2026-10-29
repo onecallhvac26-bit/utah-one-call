@@ -36,12 +36,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang={SITE_LANGUAGE}>
       <body>
-        <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-PWCVCVFQ"></script>
-<script>
+        <Script async src="https://www.googletagmanager.com/gtm.js?id=GTM-PWCVCVFQ"></Script>
+<Script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-</script>
+</Script>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-0D282WQWLZ"
           strategy="afterInteractive"
