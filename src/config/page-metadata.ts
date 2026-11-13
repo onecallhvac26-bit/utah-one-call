@@ -23,9 +23,8 @@ export const PAGE_METADATA = {
     ],
   },
   services: {
-    title: "HVAC Installation & Repair | One Call Heating & Air",
-    description:
-      "Compare furnace, AC, heat pump, and mini-split installation, repair, tune-up, and maintenance services across northern Utah.",
+    title: "HVAC Repair & Installation Services | One Call Heating & Air",
+    description: "Expert HVAC services in Northern Utah. Get furnace, AC, heat pump, and mini-split installation, repairs, and maintenance. Schedule your service today!",
     path: ROUTE_PATHS.services,
     targetKeywords: [
       "air conditioning repair",
