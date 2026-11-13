@@ -33,47 +33,51 @@ export const PAGE_METADATA = {
       "AC tune up",
       "heat pump installation",
       "mini split installation",
+      "hvac services",
     ],
   },
   about: {
-    title: "About Our Brigham City HVAC Company | One Call Heating & Air",
+    title: "Local HVAC Company in Brigham City | One Call Heating & Air",
     description:
-      "One Call Heating & Air — owner-operated HVAC in Brigham City serving seven northern Utah counties. Jesse answers the phone. (801) 864-2045.",
+      "Meet One Call Heating & Air, your owner-operated HVAC company in Brigham City, Utah. Get honest recommendations, upfront pricing, and dependable service.",
     path: ROUTE_PATHS.about,
     targetKeywords: [
       "Brigham City HVAC company",
       "owner-operated HVAC company",
+      "local hvac company",
       "local HVAC company",
     ],
   },
   socialMedia: {
-    title: "HVAC Tips & Project Updates | One Call Heating & Air",
+    title: "Seasonal HVAC Tips for Utah Homes | One Call Heating & Air",
     description:
-      "Seasonal HVAC tips, project walkthroughs, and local updates from One Call Heating & Air in Brigham City. Practical info, no filler.",
+      "Seasonal HVAC tips for northern Utah homes: when to change filters, book a tune-up, and prep your furnace before the first freeze, plus project notes. Read now!",
     path: ROUTE_PATHS.socialMedia,
     targetKeywords: [
       "One Call Heating & Air social media",
       "One Call Heating & Air project updates",
       "northern Utah HVAC tips",
+      "hvac tips",
     ],
   },
   location: {
-    title: "Northern Utah Service Area | One Call Heating & Air",
+    title: "Northern Utah HVAC Service Areas | One Call Heating & Air",
     description:
-      "One Call Heating & Air serves 41 communities across seven northern Utah counties. Find your city and confirm service. (801) 864-2045.",
+      "Looking for HVAC services in Northern Utah? We serve Ogden, Logan, Layton, Brigham City, and surrounding communities. Find your location and schedule service.",
     path: ROUTE_PATHS.location,
     targetKeywords: [
       "northern Utah HVAC service area",
       "HVAC service near me",
       "HVAC service Salt Lake County",
       "HVAC service Davis County",
+      "hvac utah",
       "HVAC service Weber County",
     ],
   },
   emergency: {
-    title: "24/7 Emergency HVAC | One Call Heating & Air",
+    title: "Emergency HVAC Repair 24/7 in Utah | One Call Heating & Air",
     description:
-      "Furnace or AC down? Call (801) 864-2045 for 24/7 emergency HVAC help across northern Utah. Owner answers, same-day routing.",
+      "Need emergency HVAC repair in Northern Utah? Get 24/7 help for furnace and AC breakdowns from One Call Heating & Air. Call (801) 864-2045 for service.",
     path: ROUTE_PATHS.emergency,
     targetKeywords: [
       "same day heating and air",
@@ -81,19 +85,21 @@ export const PAGE_METADATA = {
       "same day HVAC service",
       "24 hour AC repair",
       "emergency furnace repair northern Utah",
+      "emergency hvac repair",
       "emergency AC repair northern Utah",
     ],
   },
   contact: {
-    title: "Request HVAC Service | One Call Heating & Air",
+    title: "Request HVAC Service & Estimates | One Call Heating & Air",
     description:
-      "Request furnace, AC, heat pump, or mini-split service from One Call Heating & Air. Call (801) 864-2045 for emergencies.",
+      "Free HVAC estimates on new furnace, AC, and heat pump installs. Repairs start with an $89 diagnostic that's waived when you book the fix. Get your free quote!",
     path: ROUTE_PATHS.contact,
     targetKeywords: [
       "request HVAC service northern Utah",
       "schedule HVAC service northern Utah",
       "HVAC estimate northern Utah",
       "AC repair service request",
+      "hvac estimate",
       "furnace repair service request",
     ],
   },
