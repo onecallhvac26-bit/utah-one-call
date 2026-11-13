@@ -11,11 +11,12 @@ type PageMetadataDefinition = {
 
 export const PAGE_METADATA = {
   home: {
-    title: "One Call Heating & Air | Northern Utah HVAC Service",
-    description: SITE_DESCRIPTION,
+    title: "HVAC Contractor in Northern Utah | One Call Heating & Air",
+    description: "Need a trusted HVAC contractor in Northern Utah? One Call Heating & Air provides furnace and AC repairs, installations, and 24/7 emergency service. Call today!",
     path: ROUTE_PATHS.home,
     targetKeywords: [
       "northern Utah HVAC service",
+      "hvac contractor",
       "Brigham City HVAC",
       "HVAC contractor northern Utah",
       "heating and cooling northern Utah",
