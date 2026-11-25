@@ -67,7 +67,19 @@ function getReviewsPerPage() {
   return 3;
 }
 
-export function GoogleReviewsSection() {
+type GoogleReviewsSectionProps = {
+  eyebrow?: string;
+  title?: string;
+  accent?: string;
+  description?: string;
+};
+
+export function GoogleReviewsSection({
+  eyebrow = "Google Reviews",
+  title = "Local Work.",
+  accent = "Public Feedback.",
+  description = "See what northern Utah homeowners share about working directly with One Call Heating & Air.",
+}: GoogleReviewsSectionProps = {}) {
   const data = GOOGLE_REVIEWS_DATA;
   const reduceMotion = useReducedMotion();
   const [reviewsPerPage, setReviewsPerPage] = useState(3);
@@ -138,16 +150,17 @@ export function GoogleReviewsSection() {
       <div className="oc-container">
         <div className="oc-review-intro">
           <div className="oc-section-heading">
-            <div className="oc-eyebrow">Google Reviews</div>
+            <div className="oc-eyebrow">{eyebrow}</div>
             <h2 id="google-reviews-heading">
-              Local Work.
-              <br />
-              <em>Public Feedback.</em>
+              {title}
+              {accent ? (
+                <>
+                  <br />
+                  <em>{accent}</em>
+                </>
+              ) : null}
             </h2>
-            <p>
-              See what northern Utah homeowners share about working directly
-              with One Call Heating &amp; Air.
-            </p>
+            <p>{description}</p>
           </div>
 
           <div className="oc-review-summary" aria-label="Google review summary">

@@ -5,7 +5,7 @@ import { describe, expect, it } from "vitest";
 
 import { PAGE_METADATA } from "@/config/page-metadata";
 import { collectPageRouteContractIssues } from "@/config/page-route-contracts";
-import { PUBLIC_PAGE_ROUTES, UTILITY_ROUTES } from "@/config/route-catalog";
+import { PUBLIC_PAGE_ROUTES, REVIEW_ROUTES, UTILITY_ROUTES } from "@/config/route-catalog";
 import { SITE_PREVIEW_IMAGE_PATH } from "@/config/site";
 import { createPageMetadata } from "@/lib/metadata";
 
@@ -42,6 +42,7 @@ describe("page and route contracts", () => {
     const expectedPaths = [
       ...PUBLIC_PAGE_ROUTES.map(({ path }) => path),
       ...UTILITY_ROUTES.map(({ path }) => path),
+      ...REVIEW_ROUTES.map(({ path }) => path),
     ].sort();
 
     expect(discoveredPaths).toEqual(expectedPaths);
