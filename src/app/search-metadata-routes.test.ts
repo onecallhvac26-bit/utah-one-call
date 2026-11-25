@@ -35,6 +35,7 @@ describe("search metadata routes", () => {
     expect(urls).toEqual([
       `${SITE_URL}/`,
       `${SITE_URL}/services`,
+      `${SITE_URL}/furnace-repair`,
       `${SITE_URL}/about`,
       `${SITE_URL}/about/social-media`,
       `${SITE_URL}/location`,
