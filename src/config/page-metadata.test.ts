@@ -8,10 +8,10 @@ const SUBPAGE_TITLE_SUFFIX = " | One Call Heating & Air";
 
 describe("page metadata definitions", () => {
   it("owns one unique definition for every public content route", () => {
-    expect(PUBLIC_METADATA).toHaveLength(7);
-    expect(new Set(PUBLIC_METADATA.map(({ path }) => path)).size).toBe(7);
-    expect(new Set(PUBLIC_METADATA.map(({ title }) => title)).size).toBe(7);
-    expect(new Set(PUBLIC_METADATA.map(({ description }) => description)).size).toBe(7);
+    expect(PUBLIC_METADATA).toHaveLength(8);
+    expect(new Set(PUBLIC_METADATA.map(({ path }) => path)).size).toBe(8);
+    expect(new Set(PUBLIC_METADATA.map(({ title }) => title)).size).toBe(8);
+    expect(new Set(PUBLIC_METADATA.map(({ description }) => description)).size).toBe(8);
   });
 
   it("uses the shared brand suffix for every subpage title", () => {
@@ -40,14 +40,15 @@ describe("page metadata definitions", () => {
     expect(PAGE_METADATA.services.targetKeywords).toEqual([
       "air conditioning repair",
       "HVAC repair near me",
-      "furnace repair",
       "AC tune up",
       "heat pump installation",
       "mini split installation",
+      "hvac services",
     ]);
+    expect(PAGE_METADATA.furnaceRepair.targetKeywords).toContain("furnace repair");
     expect(PAGE_METADATA.emergency.targetKeywords).toContain(
       "same day heating and air",
     );
-    expect(PUBLIC_METADATA.map(({ path }) => path)).toHaveLength(7);
+    expect(PUBLIC_METADATA.map(({ path }) => path)).toHaveLength(8);
   });
 });

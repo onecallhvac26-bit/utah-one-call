@@ -34,7 +34,7 @@ describe("PrimaryNavigation search anchors", () => {
   );
 
   it.each([false, true])(
-    "labels the services route as HVAC Services (mobile: %s)",
+    "labels the services route as Services (mobile: %s)",
     (mobile) => {
       render(
         <nav>
@@ -43,11 +43,14 @@ describe("PrimaryNavigation search anchors", () => {
       );
 
       expect(
-        screen.getByRole("link", { name: "HVAC Services" }),
+        screen.getByRole("link", { name: /^Services/ }),
       ).toHaveAttribute("href", SERVICES_ROUTE);
       expect(
-        screen.queryByRole("link", { name: "Services" }),
+        screen.queryByRole("link", { name: "HVAC Services" }),
       ).not.toBeInTheDocument();
+      expect(
+        screen.getByRole("link", { name: "Furnace Repair" }),
+      ).toHaveAttribute("href", "/furnace-repair");
     },
   );
 });

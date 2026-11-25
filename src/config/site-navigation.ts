@@ -41,6 +41,7 @@ export const FOOTER_COMPANY_LINKS = [
 
 export type PageJourneyKey =
   | "services"
+  | "furnaceRepair"
   | "about"
   | "socialMedia"
   | "location"
@@ -79,6 +80,29 @@ export const PAGE_JOURNEYS = {
         label: "Meet the One Call Crew",
         description: "Learn how the owner-operated team approaches HVAC work and communication.",
         href: ABOUT_ROUTE,
+      },
+    ],
+  },
+  furnaceRepair: {
+    eyebrow: "Keep Planning",
+    heading: "Get Your Heat Back.",
+    description:
+      "Compare the rest of our heating and cooling work, confirm we cover your area, or send the details of your furnace problem.",
+    links: [
+      {
+        label: "Explore All Services",
+        description: "Review installation, repair, tune-up, and Gold Membership options.",
+        href: SERVICES_ROUTE,
+      },
+      {
+        label: "Check the Service Area",
+        description: "Confirm your community is on our northern Utah route.",
+        href: LOCATION_ROUTE,
+      },
+      {
+        label: "Request Furnace Service",
+        description: "Tell us what the furnace is doing and where you're located.",
+        href: CONTACT_ROUTE,
       },
     ],
   },

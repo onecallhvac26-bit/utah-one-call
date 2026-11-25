@@ -1,6 +1,7 @@
 export const ROUTE_PATHS = {
   home: "/",
   services: "/services",
+  furnaceRepair: "/furnace-repair",
   about: "/about",
   socialMedia: "/about/social-media",
   location: "/location",

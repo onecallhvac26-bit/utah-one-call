@@ -41,6 +41,7 @@ describe("shared footer navigation", () => {
   it("maps each completed leaf page to three unique supporting destinations", () => {
     const ownRoutes: Record<PageJourneyKey, string> = {
       services: SERVICES_ROUTE,
+      furnaceRepair: "/furnace-repair",
       about: ABOUT_ROUTE,
       socialMedia: SOCIAL_MEDIA_ROUTE,
       location: LOCATION_ROUTE,

@@ -10,6 +10,7 @@ import {
 type PublicPageFamily =
   | "home"
   | "services"
+  | "furnace-repair"
   | "about"
   | "social-media"
   | "location"
@@ -30,6 +31,7 @@ export type PublicPageRoute = {
 const ROUTE_FAMILIES = {
   home: "home",
   services: "services",
+  furnaceRepair: "furnace-repair",
   about: "about",
   socialMedia: "social-media",
   location: "location",
@@ -111,11 +113,13 @@ export function getPublicPageRoute(id: PublicPageId) {
 }
 
 /**
- * New pages awaiting client approval. They render with noindex and are not in
- * the sitemap. On approval, promote each into ROUTE_PATHS / PAGE_METADATA.
+ * Non-public routes kept for reference. The previous homepage and services page
+ * are kept as noindex drafts; the old /preview/* review links redirect to the
+ * live pages. None of these are in the sitemap.
  */
 export const REVIEW_ROUTES = [
-  { id: "furnace-repair", path: "/furnace-repair", kind: "page", lifecycle: "review", indexability: "noindex-follow" },
-  { id: "preview-homepage", path: "/preview/homepage", kind: "page", lifecycle: "review", indexability: "noindex-follow" },
-  { id: "preview-services", path: "/preview/services", kind: "page", lifecycle: "review", indexability: "noindex-follow" },
+  { id: "draft-old-homepage", path: "/draft/old-homepage", kind: "page", lifecycle: "draft", indexability: "noindex-follow" },
+  { id: "draft-old-services", path: "/draft/old-services", kind: "page", lifecycle: "draft", indexability: "noindex-follow" },
+  { id: "preview-homepage", path: "/preview/homepage", kind: "redirect", lifecycle: "retired", indexability: "noindex-follow" },
+  { id: "preview-services", path: "/preview/services", kind: "redirect", lifecycle: "retired", indexability: "noindex-follow" },
 ] as const;

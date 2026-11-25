@@ -119,18 +119,21 @@ export default function ServicesRewritePage({ path }: { path: `/${string}` }) {
               items={[
                 {
                   title: "HVAC installation",
+                  anchor: "install",
                   icon: "home",
                   body: "New furnaces, central AC, cold-climate heat pumps, and ductless mini-splits. We size the equipment and install it to spec.",
                   cta: { label: "Explore Installation", href: `${SERVICES_ROUTE}#install` },
                 },
                 {
                   title: "Furnace repair",
+                  anchor: "repair",
                   icon: "warm",
                   body: "If your furnace stops heating or keeps shutting off, we'll track down the problem. Our crew checks the system to find out what's wrong and gives you a clear repair quote before starting the work.",
                   cta: { label: "Get Repair Service", href: FURNACE_REPAIR_ROUTE },
                 },
                 {
                   title: "Seasonal Tune-Ups",
+                  anchor: "service",
                   icon: "clock",
                   body: "Spring AC checks and fall furnace service, including electrical tests and equipment cleaning.",
                   cta: { label: "Book a Tune-Up", href: CONTACT_ROUTE },
@@ -155,6 +158,7 @@ export default function ServicesRewritePage({ path }: { path: `/${string}` }) {
                 },
                 {
                   title: "Gold Membership",
+                  anchor: "maintenance",
                   icon: "check-circle",
                   featured: true,
                   wide: true,
@@ -168,6 +172,7 @@ export default function ServicesRewritePage({ path }: { path: `/${string}` }) {
 
         <SectionReveal index={3}>
           <LandingSection id="what-to-expect" eyebrow="What to expect" title="What to expect" accent="when you call us" centered>
+            <span id="service-planning-checklist" aria-hidden="true" />
             <StepRows
               steps={[
                 {
