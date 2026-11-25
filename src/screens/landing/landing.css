@@ -743,3 +743,18 @@
     vertical-align: top;
   }
 }
+
+/* Hero spacing + size tweak (client feedback): remove default h1 margins, cap at ~70px */
+.ocl-hero h1 {
+  margin: 10px 0 0;
+  font-size: clamp(36px, 5.2vw, 70px);
+  line-height: 1;
+}
+
+.ocl-hero .oc-emergency {
+  margin-bottom: 0;
+}
+
+.ocl-hero .oc-hero-description {
+  margin: 18px auto 24px;
+}
