@@ -151,6 +151,7 @@ export default function HomeRewritePage({ path }: { path: `/${string}` }) {
                 {
                   number: "04",
                   title: "Gold Membership",
+                  anchor: "pricing",
                   icon: "check-circle",
                   featured: true,
                   body: "For $99 a year, our Gold Membership includes two seasonal tune-ups and priority emergency scheduling. Members also get $0 diagnostic fees and 15% off parts and labor.",

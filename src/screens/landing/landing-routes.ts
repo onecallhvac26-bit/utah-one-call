@@ -1,15 +1,12 @@
-import { ABOUT_ROUTE, CONTACT_ROUTE, HOME_ROUTE, SERVICES_ROUTE } from "@/config/site";
+import { ABOUT_ROUTE, CONTACT_ROUTE, FURNACE_REPAIR_ROUTE, HOME_ROUTE, SERVICES_ROUTE } from "@/config/site";
 import type { FooterColumn } from "./LandingParts";
 
-/** New pages added for review. They are noindex and kept out of the sitemap until approved. */
-export const FURNACE_REPAIR_ROUTE = "/furnace-repair" as const;
-export const HOME_PREVIEW_ROUTE = "/preview/homepage" as const;
-export const SERVICES_PREVIEW_ROUTE = "/preview/services" as const;
+export { FURNACE_REPAIR_ROUTE };
 
 /*
  * The copy docs reference /ac-repair, /hvac-installation and /heat-pump-installation,
- * which do not exist yet. Those links point at the matching sections of the live
- * /services page so nothing 404s; swap them when those pages are built.
+ * which do not exist yet. Those links point at the matching service cards on
+ * /services (#install, #repair, #service, #maintenance); swap them when those pages are built.
  */
 export const LANDING_FOOTER_COLUMNS: readonly FooterColumn[] = [
   {

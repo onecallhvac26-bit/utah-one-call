@@ -197,6 +197,8 @@ export type ServiceCardItem = {
   cta: { label: string; href: string };
   featured?: boolean;
   wide?: boolean;
+  /** Optional in-page anchor so sitewide links like /services#install land on this card. */
+  anchor?: string;
 };
 
 export function ServiceCardGrid({
@@ -211,6 +213,7 @@ export function ServiceCardGrid({
       {items.map((item) => (
         <Link
           key={item.title}
+          id={item.anchor}
           href={item.cta.href}
           className={`oc-service-card ocl-service-card${item.featured ? " is-featured" : ""}${item.wide ? " is-wide" : ""}`}
         >
