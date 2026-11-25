@@ -11,8 +11,8 @@ type PageMetadataDefinition = {
 
 export const PAGE_METADATA = {
   home: {
-    title: "HVAC Contractor in Northern Utah | One Call Heating & Air",
-    description: "Need a trusted HVAC contractor in Northern Utah? One Call Heating & Air provides furnace and AC repairs, installations, and 24/7 emergency service. Call today!",
+    title: "HVAC Repair & Installation in Northern Utah | One Call",
+    description: "Need furnace repair, AC service, or a new HVAC system? Call One Call Heating & Air in Brigham City for honest diagnostics and 24/7 service across northern Utah.",
     path: ROUTE_PATHS.home,
     targetKeywords: [
       "northern Utah HVAC service",
@@ -23,17 +23,28 @@ export const PAGE_METADATA = {
     ],
   },
   services: {
-    title: "HVAC Repair & Installation Services | One Call Heating & Air",
-    description: "Expert HVAC services in Northern Utah. Get furnace, AC, heat pump, and mini-split installation, repairs, and maintenance. Schedule your service today!",
+    title: "HVAC Installation, Repair & Maintenance | One Call Heating & Air",
+    description: "One Call Heating & Air handles heating and cooling in northern Utah. Get HVAC repairs, installations, and tune-ups from a local crew with straight answers.",
     path: ROUTE_PATHS.services,
     targetKeywords: [
       "air conditioning repair",
       "HVAC repair near me",
-      "furnace repair",
       "AC tune up",
       "heat pump installation",
       "mini split installation",
       "hvac services",
+    ],
+  },
+  furnaceRepair: {
+    title: "Furnace Repair in Northern Utah | One Call Heating & Air",
+    description:
+      "One Call Heating & Air handles 24/7 furnace repair across northern Utah. Our local crew diagnoses the problem, explains the repair, and gives an up-front quote.",
+    path: ROUTE_PATHS.furnaceRepair,
+    targetKeywords: [
+      "furnace repair",
+      "furnace repair northern Utah",
+      "furnace repair Brigham City",
+      "emergency furnace repair",
     ],
   },
   about: {

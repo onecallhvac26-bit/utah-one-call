@@ -20,6 +20,7 @@ export const SITE_PREVIEW_IMAGE_ALT =
   "Northern Utah home with outdoor air conditioning equipment";
 export const HOME_ROUTE = ROUTE_PATHS.home;
 export const SERVICES_ROUTE = ROUTE_PATHS.services;
+export const FURNACE_REPAIR_ROUTE = ROUTE_PATHS.furnaceRepair;
 export const ABOUT_ROUTE = ROUTE_PATHS.about;
 export const SOCIAL_MEDIA_ROUTE = ROUTE_PATHS.socialMedia;
 export const LOCATION_ROUTE = ROUTE_PATHS.location;

@@ -28,10 +28,11 @@ describe("route catalog", () => {
     }
   });
 
-  it("keeps all seven completed marketing pages indexable", () => {
+  it("keeps all eight completed marketing pages indexable", () => {
     expect(INDEXABLE_PAGE_PATHS).toEqual([
       "/",
       "/services",
+      "/furnace-repair",
       "/about",
       "/about/social-media",
       "/location",
