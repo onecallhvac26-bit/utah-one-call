@@ -109,3 +109,13 @@ export function getPublicPageRoute(id: PublicPageId) {
 
   return route;
 }
+
+/**
+ * New pages awaiting client approval. They render with noindex and are not in
+ * the sitemap. On approval, promote each into ROUTE_PATHS / PAGE_METADATA.
+ */
+export const REVIEW_ROUTES = [
+  { id: "furnace-repair", path: "/furnace-repair", kind: "page", lifecycle: "review", indexability: "noindex-follow" },
+  { id: "preview-homepage", path: "/preview/homepage", kind: "page", lifecycle: "review", indexability: "noindex-follow" },
+  { id: "preview-services", path: "/preview/services", kind: "page", lifecycle: "review", indexability: "noindex-follow" },
+] as const;
