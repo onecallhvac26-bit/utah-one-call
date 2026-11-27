@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Script from "next/script";
 
+import { ConversionTracking } from "@/components/ConversionTracking";
 import { RouteEffects } from "@/components/RouteEffects";
 import {
   SITE_DESCRIPTION,
@@ -84,6 +85,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         </noscript>
         {/* End Meta Pixel Code */}
         <RouteEffects />
+        <ConversionTracking />
         {children}
       </body>
     </html>
