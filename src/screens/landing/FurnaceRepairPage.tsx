@@ -3,6 +3,7 @@ import { Link } from "@/components/Link";
 import { SectionReveal } from "@/components/SectionReveal";
 import { CONTACT_ROUTE } from "@/config/site";
 import { HeaderShell } from "@/screens/home/HeaderShell";
+import { HomeQuoteSection } from "@/screens/home/HomeQuoteSection";
 import { Icon } from "@/screens/home/Icon";
 import { LandingFaq } from "./LandingFaq";
 import {
@@ -18,6 +19,8 @@ import {
   StepRows,
 } from "./LandingParts";
 import { LANDING_FOOTER_COLUMNS } from "./landing-routes";
+
+const FURNACE_QUOTE_ANCHOR = "#furnace-quote";
 
 export const FURNACE_REPAIR_FAQS = [
   {
@@ -78,7 +81,7 @@ export default function FurnaceRepairPage({ path }: { path: `/${string}` }) {
           accent="Back Where It Belongs"
           body="When your furnace quits during a northern Utah winter, you need someone who knows how to fix it. At One Call Heating & Air, we get to the bottom of the problem before recommending repairs. Our crew checks the system, explains what's wrong, and gives you an honest quote before starting work. We also carry common replacement parts on the truck to help get your heat running again on the first visit."
           primary={CALL}
-          secondary={{ label: "Request Furnace Service", href: CONTACT_ROUTE }}
+          secondary={{ label: "Request Furnace Service", href: FURNACE_QUOTE_ANCHOR }}
           image="hero-heating-winter.jpg"
         />
 
@@ -107,7 +110,7 @@ export default function FurnaceRepairPage({ path }: { path: `/${string}` }) {
               ]}
             />
             <div className="ocl-section-cta">
-              <Link href={CONTACT_ROUTE} className="oc-button oc-button-amber oc-button-large">
+              <Link href={FURNACE_QUOTE_ANCHOR} className="oc-button oc-button-amber oc-button-large">
                 Get a Furnace Diagnostic
                 <Icon name="arrow" />
               </Link>
@@ -195,6 +198,10 @@ export default function FurnaceRepairPage({ path }: { path: `/${string}` }) {
             />
           </LandingSection>
         </SectionReveal>
+
+        <div id="furnace-quote">
+          <HomeQuoteSection />
+        </div>
 
         <SectionReveal index={4}>
           <LandingSection
