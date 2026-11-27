@@ -7,6 +7,7 @@ import { createPageMetadata } from "@/lib/metadata";
 import { createBreadcrumbStructuredData } from "@/lib/structured-data";
 import FurnaceRepairPage from "@/screens/landing/FurnaceRepairPage";
 import "@/screens/home/home.css";
+import "@/screens/contact/free-quote-form.css";
 import "@/screens/landing/landing.css";
 
 export const metadata: Metadata = createPageMetadata(PAGE_METADATA.furnaceRepair);
