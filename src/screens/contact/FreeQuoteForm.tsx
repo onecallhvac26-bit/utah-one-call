@@ -30,6 +30,7 @@ import {
   validateQuoteForm,
 } from "@/lib/free-quote";
 import { INQUIRIES_API_ROUTE } from "@/config/site";
+import { trackQuoteFormSuccess } from "@/lib/tracking";
 
 const FIELD_HELPERS = {
   name: "Enter the full name for this quote request.",
@@ -128,6 +129,12 @@ export function FreeQuoteForm() {
       const customerConfirmationSent = Boolean(
         responseBody?.data?.customerConfirmationSent,
       );
+
+      trackQuoteFormSuccess({
+        email: values.email,
+        phone: values.phone,
+        service: values.service,
+      });
 
       setValues({ ...EMPTY_QUOTE_FORM_VALUES });
       setTouchedFields({});
